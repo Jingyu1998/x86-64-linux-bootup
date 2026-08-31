@@ -47,7 +47,7 @@ Kernel relocation 過程中，原先儲存 GDT 的記憶體可能在 kernel relo
 
 `%rbx` 是 compressed kernel image 的 relocation target
 
-![](http://100.71.125.87:3000/uploads/upload_ce0793617882af6acd9694b48667043d.png)
+![](../Images/GDT-Descriptor-Structure.png)
 
 * `leaq	rva(gdt64)(%rbx), %rax`: 取得 kernel relocation 後 Symbol `gdt64` 的 runtime address。
 * `leaq	rva(gdt)(%rbx), %rdx`: 取得 kernel relocation 後 Symbol `gdt` 的 runtime address。
@@ -56,7 +56,6 @@ Kernel relocation 過程中，原先儲存 GDT 的記憶體可能在 kernel relo
     * 此時 GDT Descriptor 的 base address 欄位被設為 Symbol `gdt` 的 runtime address。 
 
 * `lgdt (%rax)`: 這個指令載入 GDT Descriptor，更新 GDTR，使 GDTR 指向新的 GDT。
-
 
 ### Result: 完成後 CPU / kernel 處於什麼狀態？
 
