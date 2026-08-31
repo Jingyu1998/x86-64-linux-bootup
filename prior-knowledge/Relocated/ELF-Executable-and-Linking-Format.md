@@ -46,6 +46,7 @@ ELF Header 儲存
 * Section Header Table 的起始位址
 
 ELF Header 的實作如下
+
 [ struct Elf32_Ehdr in elf/elf.h in glibc ](https://elixir.bootlin.com/glibc/glibc-2.44/source/elf/elf.h#L63)
 
 ```c
