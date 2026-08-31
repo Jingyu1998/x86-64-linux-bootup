@@ -66,11 +66,11 @@ Page table 中的每個 entry 佔用 8 Bytes，因此單一 Page table 的 size 
 
 **Page Table Entry to next-level page table** 
 
-![64-bit_page_tables1](../../Images/64-bit-page-tables-1.png)
+![](../../Images/Page-Table-Entry-to-next-level-page-table.png)
 
 **Page Table Entry to physical memory**
 
-![64-bit_page_tables2](../../Images/64-bit-page-tables-2.png)
+![](../../Images/Page-Table-Entry-to-physical-memory.png)
 
 ### 為什麼會有 PDPTE (1 GB) 和 PDE (2 MB)
 
