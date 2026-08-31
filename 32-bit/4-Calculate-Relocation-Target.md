@@ -227,4 +227,4 @@ Buffer size = 0x040A6000
 
 * [Linux-insides Booting Chapter 第 4 篇 Transition to 64-bit mode 第 3-2 段 Calculation of the kernel relocation address](https://0xax.gitbook.io/linux-insides/summary/booting/linux-bootstrap-4#calculation-of-the-kernel-relocation-address)
 * [Keyword Keep in Linker-script](https://wiki.osdev.org/Linker_Scripts#KEEP)
-* [Linker Script](http://100.71.125.87:3000/sSqTuTc9QVGpb8B1vJ2uhA)
+* [Linker Script](../prior-knowledge/32-bit/Linker-Script.md)
