@@ -120,6 +120,7 @@ ELF Header 中的 `e_shoff` 欄位指向 Section Header Table。
 ![](http://ccckmit.wdfiles.com/local--files/lk:elf/ELFsectionheader.jpg)
 
 Section Header Table 裡的 entry 實作如下
+
 [ struct Elf32_Shdr in elf/elf.h in glibc ](https://elixir.bootlin.com/glibc/glibc-2.44/source/elf/elf.h#L383)
 
 ```c
@@ -210,6 +211,7 @@ Compiler 在產生 object file 時，可能還不知道 `global_variable` 最終
 Symbol table 裡的 **entry** 都由一個 `Elf32_Sym` 結構描述。
 
 **Symbol table entry** 的實作如下
+
 [ struct Elf32_Sym in elf/elf.h in glibc ](https://elixir.bootlin.com/glibc/glibc-2.44/source/elf/elf.h#L520)
 
 ```c
@@ -276,6 +278,7 @@ ELF 在 relocation sections 儲存 relocation table。
 Relocation table 裡的 entry 使用 `Elf32_Rel` 結構, 實作如下
 
 [ struct Elf32_Rel in elf/elf.h in glibc ](https://elixir.bootlin.com/glibc/glibc-2.44/source/elf/elf.h#L635)
+
 ```c
 typedef struct
 {
