@@ -168,4 +168,4 @@ x86_64 的一個 page table 是 4 KB 的記憶體區域，其中有 512 個 entr
 ## 參考資料
 
 * [Linux-insides Booting Chapter 第 4 篇 Transition to 64-bit mode 第 4 段 Set up paging](https://0xax.gitbook.io/linux-insides/summary/booting/linux-bootstrap-4#set-up-paging)
-* [Protected mode on x86-compatible processors](http://100.71.125.87:3000/NP0YD3GRTxSlQtAXr__Wrw)
+* [Protected mode on x86-compatible processors](./Protected-mode-on-x86-compatible-processors.md)
