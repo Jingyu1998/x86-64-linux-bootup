@@ -13,11 +13,11 @@
 %%{init: {
   'flowchart': { 
     'nodeSpacing': 40, 
-    'rankSpacing': 60,
+    'rankSpacing': 40,
     'curve': 'linear'
   },
   'themeVariables': {
-    'fontSize': '16px',
+    'fontSize': '14px',
     'fontFamily': 'monospace'
   }
 }}%%
@@ -89,11 +89,11 @@ Start init process 完成事項
 %%{init: {
   'flowchart': { 
     'nodeSpacing': 40, 
-    'rankSpacing': 60,
+    'rankSpacing': 40,
     'curve': 'linear'
   },
   'themeVariables': {
-    'fontSize': '16px',
+    'fontSize': '14px',
     'fontFamily': 'monospace'
   }
 }}%%
@@ -193,11 +193,11 @@ GRUB2 完成的前置準備恰好對應 Linux-insides Booting Chapter 第 4 篇�
 %%{init: {
   'flowchart': { 
     'nodeSpacing': 40, 
-    'rankSpacing': 60,
+    'rankSpacing': 20,
     'curve': 'linear'
   },
   'themeVariables': {
-    'fontSize': '16px',
+    'fontSize': '14px',
     'fontFamily': 'monospace'
   }
 }}%%
@@ -257,11 +257,11 @@ flowchart TD
 %%{init: {
   'flowchart': { 
     'nodeSpacing': 40, 
-    'rankSpacing': 60,
+    'rankSpacing': 15,
     'curve': 'linear'
   },
   'themeVariables': {
-    'fontSize': '16px',
+    'fontSize': '14px',
     'fontFamily': 'monospace'
   }
 }}%%
@@ -280,7 +280,6 @@ flowchart TD
         string6[["Kernel relocation"]]:::StringNode
         string7[["Reload GDT after kernel relocation"]]:::StringNode
         string8[["Jump on the relocated code"]]:::StringNode
-        
         
         %% Connection
         string1 --> string2 --> string3 --> string4  
@@ -326,11 +325,11 @@ Relocated Kernel Setup 程式碼範圍
 %%{init: {
   'flowchart': { 
     'nodeSpacing': 40, 
-    'rankSpacing': 60,
+    'rankSpacing': 30,
     'curve': 'linear'
   },
   'themeVariables': {
-    'fontSize': '16px',
+    'fontSize': '14px',
     'fontFamily': 'monospace'
   }
 }}%%
@@ -339,7 +338,7 @@ flowchart TD
     classDef StringNode fill:#95CACA
 
     %% Subgraph 
-    subgraph 64-bit kernel Setup
+    subgraph Relocated Kernel Setup
         direction TB
         string1[["Initialize the BSS section"]]:::StringNode
         string2[["Load the Stage2 Interrupt Descriptor Table"]]:::StringNode
@@ -350,6 +349,5 @@ flowchart TD
         %% Connection
         string1 --> string2 --> string3 --> string4  
         string4 --> string5 
-        
     end
 ```
