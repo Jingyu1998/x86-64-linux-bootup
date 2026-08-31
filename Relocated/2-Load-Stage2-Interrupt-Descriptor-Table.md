@@ -60,5 +60,5 @@ void load_stage2_idt(void)
 
 ## 參考來源
 
-* [Page Fault Interrupt Handler](http://100.71.125.87:3000/rPnM4yf1QqC9LfEwpW0gew)
+* [Page Fault Interrupt Handler](../prior-knowledge/Relocated/Page-Fault-Interrupt-Handler.md)
 * [Linux-insides Booting Chapter 第 5 篇 Kernel decompression 第 2 段 The last actions before the kernel decompression](https://0xax.gitbook.io/linux-insides/summary/booting/linux-bootstrap-5#the-last-actions-before-the-kernel-decompression)
