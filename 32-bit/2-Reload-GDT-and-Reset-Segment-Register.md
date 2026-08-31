@@ -27,7 +27,7 @@ The `ebp` register contains the physical address of the `startup_32` symbol.
 
 * `leal	rva(gdt)(%ebp), %eax`: 計算 Symbol `gdt` 的 physical memory address。
 
-![](http://100.71.125.87:3000/uploads/upload_ce0793617882af6acd9694b48667043d.png)
+![](../Images/GDT-Descriptor-Structure.png)
 
 * `movl %eax, 2(%eax)`: Symbol `gdt` 實際上指向 GDT Descriptor（一個 6-byte的結構）。這個指令將 **`%eax` 的值**寫入 **`%eax + 2` 的記憶體位址**，此時 GDT Descriptor 的 base address 欄位被設為 gdt 的 physical address。
 * `lgdt (%eax)`: 這個指令載入 GDT Descriptor，更新 GDTR，使 GDTR 指向新的 GDT。
@@ -183,4 +183,4 @@ Code Segment Register 已載入 `$__KERNEL32_CS` Code Segment Selector
 ## 參考來源
 
 * [Linux-insides Booting Chapter 第 4 篇 Transition to 64-bit mode 第 2 段 Reload the segments if needed](https://0xax.gitbook.io/linux-insides/summary/booting/linux-bootstrap-4#reload-the-segments-if-needed)
-* [Protected mode on x86-compatible processors](http://100.71.125.87:3000/NP0YD3GRTxSlQtAXr__Wrw)
+* [Protected mode on x86-compatible processors](../prior-knowledge/32-bit/Protected-mode-on-x86-compatible-processors.md)
