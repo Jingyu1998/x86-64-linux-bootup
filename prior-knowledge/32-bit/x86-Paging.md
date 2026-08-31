@@ -21,7 +21,8 @@ Code Segment、Data Segment 和 Stack Segment 仍然存在，但只保留部分�
 
 在 **four-level paging** 模式下，**virtual address** 長度為 64 位元。但是，只有其中的低 48 bit 實際用於轉換為 physical address。
 
-virtual address 47-0 bit
+**Virtual address 47-0 bit**
+
 ![](https://0xax.gitbook.io/linux-insides/~gitbook/image?url=https%3A%2F%2F3490860827-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M6zWfOAfArTn8XhUn_P%252Fuploads%252Fgit-blob-75990129ecb6a142f546a3e51370892b88a4dbdf%252Fearly-page-table.svg%3Falt%3Dmedia&width=400&dpr=3&quality=100&sign=42831846&sv=2)
 
 48 bits 的 47-12 bit，以 9 bit 為一組，一共分四組。一組 9 bit 的值，代表某一層 page table 的 entry number
@@ -63,9 +64,9 @@ Page table 中的每個 entry 佔用 8 Bytes，因此單一 Page table 的 size 
 * Page Directory entry (2 MB)
 * Page Table entry
 
-![64-bit_page_tables1](http://100.71.125.87:3000/uploads/upload_a8bf56f792859c943a15040efe48a237.png)
+![64-bit_page_tables1](../../Images/64-bit-page-tables-1.png)
 
-![64-bit_page_tables2](http://100.71.125.87:3000/uploads/upload_e88c428ab3755492840245a0902e50dc.png)
+![64-bit_page_tables2](../../Images/64-bit-page-tables-2.png)
 
 ### 為什麼會有 PDPTE (1 GB) 和 PDE (2 MB)
 
