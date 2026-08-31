@@ -65,7 +65,7 @@ kernel 必須使用自己定義的 GDT。而非依賴於 bootloader 定義的 GD
 	lgdt	(%rax)
 ```
 
-![](http://100.71.125.87:3000/uploads/upload_ce0793617882af6acd9694b48667043d.png)
+![](../Images/GDT-Descriptor-Structure.png)
 
 * `leal	gdt64(%rip), %rax`: 取得 Symbol `gdt64` 的 runtime address。
 * `add %rax, 2(%rax)`: 
