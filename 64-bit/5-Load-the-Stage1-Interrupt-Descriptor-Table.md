@@ -80,7 +80,7 @@ SYM_DATA_END_LABEL(boot_idt, SYM_L_GLOBAL, boot_idt_end)
     * 所以將 `%rsi` 的值存入 `%r15`。`%r15` 是屬於 callee-saved register。C function 若要使用 `%r15`，需要負責保存並恢復 `%r15`。
 * `call	load_stage1_idt`: 呼叫 c function `load_stage1_idt`
 
-[function load_stage1_idt in arch/x86/boot/compressed/idt_64.c](https://elixir.bootlin.com/linux/v6.14/source/arch/x86/boot/compressed/idt_64.c)
+[**function load_stage1_idt in `arch/x86/boot/compressed/idt_64.c`**](https://elixir.bootlin.com/linux/v6.14/source/arch/x86/boot/compressed/idt_64.c)
 
 ```c=30
 /* Setup IDT before kernel jumping to  .Lrelocated */
@@ -110,5 +110,4 @@ IDTR 已指向 kernel 自己定義的 IDT。
 ## 參考來源
 
 * [Linux-insides Booting Chapter 第 5 篇 Kernel decompression 第 1-5 段 Load of the Interrupt Descriptor Table](https://0xax.gitbook.io/linux-insides/summary/booting/linux-bootstrap-5#load-of-the-interrupt-descriptor-table)
-* [Calling Convention](http://100.71.125.87:3000/qh-tq5p-T9ekk1PX877ErA)
-
+* [Calling Convention](../prior-knowledge/64-bit/Calling-Convention.md)
