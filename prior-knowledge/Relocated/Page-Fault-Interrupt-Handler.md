@@ -36,11 +36,11 @@ Page Fault 的處理可以分成 CPU → Page Fault Interrupt Handler → Kernel
 %%{init: {
   'flowchart': { 
     'nodeSpacing': 40, 
-    'rankSpacing': 60,
+    'rankSpacing': 40,
     'curve': 'linear'
   },
   'themeVariables': {
-    'fontSize': '20px',
+    'fontSize': '16px',
     'fontFamily': 'monospace'
   }
 }}%%
@@ -52,14 +52,16 @@ flowchart TD
     
     %% Subgraph 
     subgraph CPU
-        A{"Memory Access"}
-        C["Page Fault (#PF)"]
-        D["保存 Processor State"]
-        E["CR2 ← Faulting Address<br/>產生 Error Code"]
         F["恢復 Processor State"]
         G["Process 正常執行"]:::MacroNode
+        A{"Memory<br/>Access"}
+        C["Page Fault (#PF)"]
+        D["保存 Processor State"]
+        E["Faulting Address<br/>寫入 CR2"]
+        B["產生 Error Code"]
+
         %% Connection
-        A  -- "無法完成" --> C --> D --> E
+        A  -- "無法完成" --> C --> D --> E --> B
         A  -- "可以完成" --> G
         F  --> G
         G  --> A
@@ -74,9 +76,9 @@ flowchart TD
     end
 
     subgraph Kernel
-        L["判斷 Fault 原因與是否合法"]
-        M{"可以處理？"}
-        N["修正 Memory Management State"]
+        L["判斷 Page Fault 原因"]
+        M{"Page Fault<br/>可以合法處理？"}
+        N["修正 Memory<br/>Management State"]
         O["處理無法恢復的 Fault"]
         %% Connection
         L --> M
@@ -84,11 +86,10 @@ flowchart TD
         M -- "否" --> O
     end
     
-    E -- "交給 Handler" --> H
+    B -- "交給 Handler" --> H
     I -- "交給 Kernel" --> L
     N -- "交給 Handler" --> K
     K -- "交給 CPU" --> F
-
 ```
 
 
