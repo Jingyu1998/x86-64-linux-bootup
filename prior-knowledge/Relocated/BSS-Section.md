@@ -55,5 +55,5 @@ Block starting symbol（縮寫為 .bss 或 bss）是 object file、executable �
 
 ## 參考來源
 
-[ wikipedia `.bss` ](https://en.wikipedia.org/wiki/.bss)
-[C/C++的初始化規則與變數的儲存週期](https://hackmd.io/@HsuChiChen/memory-layout-in-c)
+* [ wikipedia `.bss` ](https://en.wikipedia.org/wiki/.bss)
+* [C/C++的初始化規則與變數的儲存週期](https://hackmd.io/@HsuChiChen/memory-layout-in-c)
