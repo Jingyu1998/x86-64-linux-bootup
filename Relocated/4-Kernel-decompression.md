@@ -193,4 +193,4 @@ kernel **不能** relocation 時，destination virtual address 是否仍為預�
 
 * [Linux-insides Booting Chapter 第 5 篇 Kernel decompression 第 2 段 The last actions before the kernel decompression](https://0xax.gitbook.io/linux-insides/summary/booting/linux-bootstrap-5#the-last-actions-before-the-kernel-decompression)
 * [Linux-insides Booting Chapter 第 5 篇 Kernel decompression 第 3 段 Kernel decompression](https://0xax.gitbook.io/linux-insides/summary/booting/linux-bootstrap-5#kernel-decompression)
-* [ELF, Executable and Linking Format](http://100.71.125.87:3000/3jR2QuE0RBa4GxbxMkxh2A)
+* [ELF, Executable and Linking Format](../prior-knowledge/Relocated/ELF-Executable-and-Linking-Format.md)
