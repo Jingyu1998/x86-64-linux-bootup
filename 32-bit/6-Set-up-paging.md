@@ -340,6 +340,5 @@ CPU 必須知道 boot page table 的 base address，才能在後續啟用 paging
 下一步將進行切換至 long mode 所需的 CPU 設定。
 
 ## 參考資料
-- [Paging](http://100.71.125.87:3000/f1Bjy9lkSB2KRSUQqLapSg)
+- [x86 Paging](../prior-knowledge/32-bit/x86-Paging.md)
 - [Linux-insides Booting Chapter 第 4 篇 Transition to 64-bit mode 第 4 段 Set up paging](https://0xax.gitbook.io/linux-insides/summary/booting/linux-bootstrap-4#set-up-paging)
-
