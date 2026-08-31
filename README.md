@@ -154,10 +154,10 @@ GRUB2 完成的前置準備恰好對應 Linux-insides Booting Chapter 第 4 篇�
 * [Linux-insides Booting Chapter 第 5 篇 Kernel decompression](https://0xax.gitbook.io/linux-insides/summary/booting/linux-bootstrap-5)
 
 ## Prior Knowledge for 32-bit Kernel Setup
-- [Real mode on x86-compatible processors](http://100.71.125.87:3000/2_whCScQQbmJoxQS4mWefQ)
-- [Protected mode on x86-compatible processors](http://100.71.125.87:3000/NP0YD3GRTxSlQtAXr__Wrw)
-- [Linker Script](http://100.71.125.87:3000/sSqTuTc9QVGpb8B1vJ2uhA)
-- [x86 Paging](http://100.71.125.87:3000/f1Bjy9lkSB2KRSUQqLapSg)
+- [Real mode on x86-compatible processors](prior-knowledge/32-bit/Real-mode-on-x86-compatible-processors.md)
+- [Protected mode on x86-compatible processors](prior-knowledge/32-bit/Protected-mode-on-x86-compatible-processors.md)
+- [Linker Script](prior-knowledge/32-bit/Linker-Script.md)
+- [x86 Paging](prior-knowledge/32-bit/x86-Paging.md)
 
 ## 32-bit Kernel Setup
 
@@ -179,13 +179,13 @@ GRUB2 完成的前置準備恰好對應 Linux-insides Booting Chapter 第 4 篇�
 - 跳轉至 64-bit kernel Setup 
 
 32-bit Kernel Setup 程式碼階段
-- [Stage 1: Clear CPU State and Compute runtime address of `startup_32`](http://100.71.125.87:3000/0IV0x1inQrma2dF4eWxGdg)
-- [Stage 2: Reload GDT and Reset Segment Register](http://100.71.125.87:3000/aGOhZr-ORRKPJ0PBz4Dj2g)
-- [Stage 3: CPU verification](http://100.71.125.87:3000/yWthmn6xRrGh8k4BfSEgVg)
-- [Stage 4: Calculate the Relocation Target](http://100.71.125.87:3000/mqqwt-rKR6Cs9ZY38ppDHA)
-- [Stage 5: Enable PAE mode](http://100.71.125.87:3000/bbYhVW1lQg6NB2pMuaG3Zw)
-- [Stage 6: Set up paging](http://100.71.125.87:3000/MgSP3yOiRBKClEdgiFMgdA)
-- [Stage 7: Transition to 64-bit](http://100.71.125.87:3000/hhiXLmwaTamhyIbb0HTrVw)
+- [Stage 1: Clear CPU State and Compute runtime address of `startup_32`](32-bit/1-Clear-CPU-State-and-Compute-runtime-addr-of-startup-32.md)
+- [Stage 2: Reload GDT and Reset Segment Register](32-bit/2-Reload-GDT-and-Reset-Segment-Register.md)
+- [Stage 3: CPU verification](32-bit/3-CPU-verification.md)
+- [Stage 4: Calculate the Relocation Target](32-bit/4-Calculate-Relocation-Target.md)
+- [Stage 5: Enable PAE mode](32-bit/5-Enable-PAE-mode.md)
+- [Stage 6: Set up paging](32-bit/6-Set-up-paging.md)
+- [Stage 7: Transition to 64-bit](32-bit/7-Transition-to-64-bit.md)
 
 32-bit Kernel Setup 程式碼範圍
 * [**SYM_FUNC_START(startup_32) to SYM_FUNC_END(startup_32)**](https://elixir.bootlin.com/linux/v6.14/source/arch/x86/boot/compressed/head_64.S#L82)
@@ -224,7 +224,7 @@ flowchart TD
 ```
 
 ## Prior Knowledge for 64-bit Kernel Setup
-[Calling Convention](http://100.71.125.87:3000/qh-tq5p-T9ekk1PX877ErA)
+[Calling Convention](prior-knowledge/64-bit/Calling-Convention.md)
 
 ## 64-bit Kernel Setup
 內容來源:
@@ -242,14 +242,14 @@ flowchart TD
 - 跳轉至 relocated kernel Setup 
 
 64-bit Kernel Setup 程式碼階段
-- [Stage 1: Clear CPU State](http://100.71.125.87:3000/o3FUQwFkTQmcEOtTzlwRng)
-- [Stage 2: Clear data segment registers](http://100.71.125.87:3000/QU0Rz-egQCSaf9HcWxIw5w)
-- [Stage 3: Calculate the Relocation Target](http://100.71.125.87:3000/w_Dz7dVVQzW3oQPR90Mi9A)
-- [Stage 4: Reload GDT and Reset Segment Register](http://100.71.125.87:3000/wtEPVFvsSGG01VqVteCSiw)
-- [Stage 5: Load the Stage1 Interrupt Descriptor Table](http://100.71.125.87:3000/cboi0L5OT3e4_TGRy6JL1A)
-- [Stage 6: Kernel relocation](http://100.71.125.87:3000/X56FuXzOTT-pjSIO-MGxig)
-- [Stage 7: Reload GDT after kernel relocation](http://100.71.125.87:3000/JLXxUE7gSEeS5WbTE_cjcA)
-- [Stage 8: Jump on the relocated code](http://100.71.125.87:3000/SY4l6CHqQp6l-8HRQvedFw)	
+- [Stage 1: Clear CPU State](64-bit/1-Clear-CPU-State.md)
+- [Stage 2: Clear data segment registers](64-bit/2-Clear-data-segment-registers.md)
+- [Stage 3: Calculate the Relocation Target](64-bit/3-Calculate-Relocation-Target.md)
+- [Stage 4: Reload GDT and Reset Segment Register](64-bit/4-Reload-GDT-and-Reset-Code-Segment-Register.md)
+- [Stage 5: Load the Stage1 Interrupt Descriptor Table](64-bit/5-Load-the-Stage1-Interrupt-Descriptor-Table.md)
+- [Stage 6: Kernel relocation](64-bit/6-Kernel-relocation.md)
+- [Stage 7: Reload GDT after kernel relocation](64-bit/7-Reload-GDT-after-kernel-relocation.md)
+- [Stage 8: Jump on the relocated code](64-bit/8-Jump-on-the-relocated-code.md)	
 
 64-bit Kernel Setup 程式碼範圍
 * [**SYM_CODE_START(startup_64) to SYM_CODE_END(startup_64)**](https://elixir.bootlin.com/linux/v6.14/source/arch/x86/boot/compressed/head_64.S#L286)
@@ -290,10 +290,10 @@ flowchart TD
 ```
 
 ## Prior Knowledge for Relocated Kernel Setup
-* [BSS Section](http://100.71.125.87:3000/oXgeUQp7Rq-sGKL5zUjwiA)
-* [Page Fault Interrupt Handler](http://100.71.125.87:3000/rPnM4yf1QqC9LfEwpW0gew)
-* [Linux Kernel Page-table Abstraction](http://100.71.125.87:3000/U6_Lta8VTUi_rNojyYTJrw)
-* [ELF, Executable and Linking Format](http://100.71.125.87:3000/3jR2QuE0RBa4GxbxMkxh2A)
+* [BSS Section](prior-knowledge/Relocated/BSS-Section.md)
+* [Page Fault Interrupt Handler](prior-knowledge/Relocated/Page-Fault-Interrupt-Handler.md)
+* [Linux Kernel Page-table Abstraction](prior-knowledge/Relocated/Linux-Kernel-Page-table-Abstraction.md)
+* [ELF, Executable and Linking Format](prior-knowledge/Relocated/ELF-Executable-and-Linking-Format.md)
 
 ## Relocated Kernel Setup
 內容來源:
@@ -313,11 +313,11 @@ Relocated Kernel Setup 完成事項
 - CPU 跳轉至 decompressed kernel entry point
 
 Relocated Kernel Setup 程式碼階段
-- [Stage 1: Initialize the BSS section](http://100.71.125.87:3000/38RiVjc2SvW4U9CAhrcMYQ)
-- [Stage 2: Load the Stage2 Interrupt Descriptor Table](http://100.71.125.87:3000/xDCc-Uk8SV6xnikAk6p6Ag)
-- [Stage 3: Build identity mapping page table](http://100.71.125.87:3000/ROYLXHsDTdqdhXnTD08WpA)
-- [Stage 4: Kernel decompression](http://100.71.125.87:3000/9UsgMwClQWq1Vstb9UAEjw)
-- [Stage 5: Jump on decompressed kernel entrypoint](http://100.71.125.87:3000/i1x69KWHSBCRnmYX5Imgig)
+- [Stage 1: Initialize the BSS section](Relocated/1-Initialize-BSS-section.md)
+- [Stage 2: Load the Stage2 Interrupt Descriptor Table](Relocated/2-Load-Stage2-Interrupt-Descriptor-Table.md)
+- [Stage 3: Build identity mapping page table](Relocated/3-Build-identity-mapping-page-table.md)
+- [Stage 4: Kernel decompression](Relocated/4-Kernel-decompression.md)
+- [Stage 5: Jump on decompressed kernel entrypoint](Relocated/5-Jump-on-decompressed-kernel-entrypoint.md)
 
 Relocated Kernel Setup 程式碼範圍
 * [SYM_FUNC_START_LOCAL_NOALIGN(.Lrelocated) to SYM_FUNC_END(.Lrelocated)](https://elixir.bootlin.com/linux/v6.14/source/arch/x86/boot/compressed/head_64.S#L453)
