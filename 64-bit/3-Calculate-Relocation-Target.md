@@ -60,7 +60,7 @@ kernel 尚未計算出放置 decompressed kernel image 的起始位址。
     * symbol  `startup_32` 的起始位址也就是 compressed kernel image 的起始位址。
     * 將此位址載入 `%rbp`
 * 將 `%rbp` 對齊至 `BP_kernel_alignment` 
-    * 細節參考: [32-bit Kernel Setup Stage 4: Calculate the Relocation Target](http://100.71.125.87:3000/mqqwt-rKR6Cs9ZY38ppDHA) 
+    * 細節參考: [32-bit Kernel Setup Stage 4: Calculate the Relocation Target](../32-bit/4-Calculate-Relocation-Target.md) 
 * 對齊完成後，比較 `%rbp` 和 `$LOAD_PHYSICAL_ADDR`=`0x01000000` 
     * 如果 `%rbp` 等於或大於 LOAD_PHYSICAL_ADDRESS，則保持不變。
     * 否則，將 LOAD_PHYSICAL_ADDRESS 載入 `%rbp`
@@ -130,4 +130,4 @@ kernel 計算出搬遷 compressed kernel image 的目標位址, 存於 `%rbx`。
 ## 參考來源
 
 * [Linux-insides Booting Chapter 第 5 篇 Kernel decompression 第 1-3 段 Calculation of the kernel relocation address](https://0xax.gitbook.io/linux-insides/summary/booting/linux-bootstrap-5#calculation-of-the-kernel-relocation-address)
-* [32-bit Kernel Setup Stage 4: Calculate the Relocation Target](http://100.71.125.87:3000/mqqwt-rKR6Cs9ZY38ppDHA)
+* [32-bit Kernel Setup Stage 4: Calculate the Relocation Target](../32-bit/4-Calculate-Relocation-Target.md)
