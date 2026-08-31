@@ -89,7 +89,7 @@ Start init process 完成事項
 %%{init: {
   'flowchart': { 
     'nodeSpacing': 40, 
-    'rankSpacing': 40,
+    'rankSpacing': 15,
     'curve': 'linear'
   },
   'themeVariables': {
@@ -103,6 +103,7 @@ flowchart TD
 
     %% Subgraph 
     subgraph Linux
+        direction TB
         %% Subgraph 
         subgraph Kernel-Setup
             direction TB
