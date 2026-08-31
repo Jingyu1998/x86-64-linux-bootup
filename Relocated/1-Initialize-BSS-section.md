@@ -53,6 +53,5 @@ BSS section 儲存未初始化的 global 和 static variables。
 
 ## 參考來源
 
-* [BSS Section](http://100.71.125.87:3000/oXgeUQp7Rq-sGKL5zUjwiA)
+* [BSS Section](../prior-knowledge/Relocated/BSS-Section.md)
 * [Linux-insides Booting Chapter 第 5 篇 Kernel decompression 第 2 段 The last actions before the kernel decompression](https://0xax.gitbook.io/linux-insides/summary/booting/linux-bootstrap-5#the-last-actions-before-the-kernel-decompression)
-
